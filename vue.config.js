@@ -2,7 +2,7 @@ module.exports = {
   devServer: {
     proxy: {
       "^/api": {
-        target: "https://fevrok.dev/",
+        target: process.env.VUE_APP_API_URL,
         ws: true,
         changeOrigin: true
       }

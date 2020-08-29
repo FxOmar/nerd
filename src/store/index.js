@@ -17,9 +17,7 @@ export default new Vuex.Store({
   actions: {
     async getUser({ commit }) {
       try {
-        const { data } = await Axios.get(
-          "/api/v1/portfolio/chadidi/?api_key=du4iwvio46"
-        );
+        const data = await Axios.get("/api/v1/portfolio/fxomar");
         commit("SET_USER", data);
       } catch (error) {
         console.error(error);
